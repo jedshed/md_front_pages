@@ -23,12 +23,7 @@ def main():
 
     util.hello_world()
 
-    ###############
-    # DEBUG FUNCS #
-    ###############
-    # func.debug_write_to_vault(markdown_final)
-    # func.debug_clear_tmp_and_complete_and_log_folders()
-    func.debug_break()
+ 
 
 
     ''' PLAYBOOK NEEDS THIS VERSION OF FUNC '''
@@ -40,10 +35,20 @@ def main():
     func.at_start_output(
     do_func = True)
 
+
+    ''' UTIL UPDATE REMOTE LINE'''
     ''' FUNCS MATCH '''
     ##### CHECK Internet Connected
     func.check_internet_connected(
     do_func = True)
+
+   ###############
+    # DEBUG FUNCS #
+    ###############
+    # func.debug_write_to_vault(markdown_final)
+    # func.debug_clear_tmp_and_complete_and_log_folders()
+    func.debug_break()
+
 
     ''' FUNCS MATCH '''
     ##### GET_latest_url with BS

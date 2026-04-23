@@ -4,6 +4,7 @@ import functions as func
 import sys
 from curl_cffi import requests
 from bs4 import BeautifulSoup
+import utils as util
 
 def get_latest_url(base_url, lim, do_func, do_display_all_hrefs):
 
@@ -14,7 +15,7 @@ def get_latest_url(base_url, lim, do_func, do_display_all_hrefs):
 
     ##### do func check
     if not do_func:
-        func.helper_update_remote_line(
+        util.helper_update_remote_line(
             1, f"{func_text:<{conf.fpad}} ... FUNC SKIPPED")
         func.debug_delay_long()
         return
@@ -30,7 +31,7 @@ def get_latest_url(base_url, lim, do_func, do_display_all_hrefs):
             # links = {link.get("href") for link in soup.find_all("a") if link.get("href")}
             links = [link.get("href") for link in soup.find_all("a") if link.get("href")]
             latest_url = (list(links)[lim]) if len(links) > lim else print("Link not found")
-            func.helper_update_remote_line(
+            util.helper_update_remote_line(
                 1, f"{func_text:<{conf.fpad}} ... DONE")
             func.debug_delay_long()
             print(f"--- {latest_url}")

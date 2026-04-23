@@ -936,7 +936,7 @@ wheels = [
 ]
 
 [[package]]
-name = "md-playbook"
+name = "md-front-pages"
 version = "1.0.0"
 source = { virtual = "." }
 dependencies = [

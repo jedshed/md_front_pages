@@ -9,7 +9,7 @@ from config import Config as conf
 import functions as func
 from config import Config as conf
 
-from utils import hello_world
+import utils as util
 
     ###############
     # DEBUG FUNCS #
@@ -21,7 +21,7 @@ from utils import hello_world
 def main():
 
 
-    hello_world()
+    util.hello_world()
 
     ###############
     # DEBUG FUNCS #

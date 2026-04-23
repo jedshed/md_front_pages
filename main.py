@@ -9,6 +9,7 @@ from config import Config as conf
 import functions as func
 from config import Config as conf
 
+from utils import hello_world
 
     ###############
     # DEBUG FUNCS #
@@ -18,6 +19,17 @@ from config import Config as conf
     # func.debug_break()
 
 def main():
+
+
+    hello_world()
+
+    ###############
+    # DEBUG FUNCS #
+    ###############
+    # func.debug_write_to_vault(markdown_final)
+    # func.debug_clear_tmp_and_complete_and_log_folders()
+    func.debug_break()
+
 
     ''' PLAYBOOK NEEDS THIS VERSION OF FUNC '''
     ##### Register atexit function

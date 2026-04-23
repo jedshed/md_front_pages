@@ -4,6 +4,8 @@ import utils as util
 import socket
 import sys
 import utils as util
+#from utils import helper_update_remote_line
+
 
 # Connect to Google's public DNS server on port 53
 # Timeout is set to 3 seconds to avoid long hangs

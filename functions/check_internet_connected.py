@@ -1,10 +1,9 @@
 import functions as func
 from config import Config as conf
-import utils as util
 import socket
 import sys
 import utils as util
-#from helper_functions import helper_update_remote_line
+# from util.helper_functions import helper_update_remote_line
 
 
 # Connect to Google's public DNS server on port 53

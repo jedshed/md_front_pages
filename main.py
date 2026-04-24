@@ -36,7 +36,7 @@ def main():
     do_func = True)
 
 
-    ''' UTIL UPDATE REMOTE LINE'''
+    ''' '''
     ''' FUNCS MATCH '''
     ##### CHECK Internet Connected
     func.check_internet_connected(

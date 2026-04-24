@@ -6,7 +6,7 @@ from functions.debug_functions import debug_break
 from functions.debug_functions import debug_write_to_vault
 from functions.debug_functions import debug_clear_tmp_and_complete_and_log_folders
 
-from functions.helper_functions import helper_update_remote_line
+#from functions.helper_functions import helper_update_remote_line
 
 from functions.at_exit_output import at_exit_output
 from functions.at_start_output import at_start_output

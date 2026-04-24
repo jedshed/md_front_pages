@@ -8,6 +8,7 @@ dependencies = [
     "beautifulsoup4>=4.14.3",
     "curl-cffi>=0.15.0",
     "markitdown>=0.0.2",
+    "md-playbook",
     "numpy<2.0",
     "requests>=2.32.5",
     "trafilatura>=2.0.0",
@@ -16,3 +17,4 @@ dependencies = [
 
 [tool.uv.sources]
 utils = { path = "../utils", editable = true }
+md-playbook = { git = "https://github.com/jedshed/md_front_pages" }

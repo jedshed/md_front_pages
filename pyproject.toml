@@ -15,4 +15,4 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-utils = { git = "https://github.com/jedshed/utils" }
+utils = { path = "../utils", editable = true }

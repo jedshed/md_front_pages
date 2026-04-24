@@ -958,7 +958,7 @@ requires-dist = [
     { name = "numpy", specifier = "<2.0" },
     { name = "requests", specifier = ">=2.32.5" },
     { name = "trafilatura", specifier = ">=2.0.0" },
-    { name = "utils", git = "https://github.com/jedshed/utils" },
+    { name = "utils", editable = "../utils" },
 ]
 
 [[package]]
@@ -1871,10 +1871,13 @@ wheels = [
 [[package]]
 name = "utils"
 version = "0.1.0"
-source = { git = "https://github.com/jedshed/utils#3f253656b2ebb37b391dadbba8241b3eada65ce6" }
+source = { editable = "../utils" }
 dependencies = [
     { name = "requests" },
 ]
+
+[package.metadata]
+requires-dist = [{ name = "requests", specifier = ">=2.33.1" }]
 
 [[package]]
 name = "xlrd"

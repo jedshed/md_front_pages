@@ -62,8 +62,8 @@ def main():
     ##### EXTRACT metadata as metadata_vars OBJ and display if required
     metadata_vars = func.extract_metadata_vars(latest_url,
     do_func = True,
-    do_display_metadata_select = False,
-    do_display_metadata_all = False)
+    do_display_metadata_select = True,
+    do_display_metadata_all = True)
     ### Assign metadata VARS from metadata_vars OBJ
     meta_date           = metadata_vars['meta_date']
     meta_filedate       = metadata_vars['meta_filedate']

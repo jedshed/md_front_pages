@@ -1,6 +1,6 @@
 import functions as func
 from config import Config as conf
-from trafilatura import *
+from trafilatura import fetch_url, extract_metadata
 import textwrap
 import shutil
 
@@ -9,6 +9,13 @@ def extract_metadata_vars(
     do_display_metadata_all,
     do_display_metadata_select,
     do_func):
+
+    # Initialize EVERYTHING as strings to prevent "Unbound" errors at the return
+    downloaded = None
+    metadata = None
+    metadata_items = []
+    meta_date = meta_filedate = meta_title = meta_sitename = "None"
+    meta_url = meta_description = meta_author = meta_publish_date = "None"
 
     ##### Extract Metadate with Trafilatura
     func_text = ("EXTRACT METADATA")
@@ -22,28 +29,32 @@ def extract_metadata_vars(
         func.debug_delay_long()
         return
 
+
     ##### Download page content as downloaded
     try:
         downloaded = fetch_url(latest_url)
     except Exception as e:
         print(f"Failed to: {func_text:<{conf.fpad}} {e}")
 
+
     ##### Extract metadata object
-    try:
-        metadata = extract_metadata(downloaded)
-    except Exception as e:
-        print(f"Failed to: {func_text:<{conf.fpad}} {e}")
+    if downloaded:
+        try:
+            metadata = extract_metadata(downloaded)
+        except Exception as e:
+            print(f"Failed to: {func_text:<{conf.fpad}} {e}")
 
     ##### Assign Select metadata as Vars
     try:
         if metadata:
-            meta_date = metadata.date if metadata and metadata.date else "None"
-            meta_filedate = metadata.filedate if metadata and metadata.filedate else "None"
-            meta_title = metadata.title if metadata and metadata.title else "None"
-            meta_sitename = metadata.sitename if metadata and metadata.sitename else "None"
-            meta_url = metadata.url if metadata and metadata.url else "None"
-            meta_description = metadata.description if metadata and metadata.description else "None"
-            meta_author = metadata.author if metadata and metadata.author else "None"
+            # Use 'or' to provide the string "None" if the attribute is None or Empty
+            meta_date = metadata.date or "None"
+            meta_filedate = metadata.filedate or "None"
+            meta_title = metadata.title or "None"
+            meta_sitename = metadata.sitename or "None"
+            meta_url = metadata.url or "None"
+            meta_description = metadata.description or "None"
+            meta_author = metadata.author or "None"
 
 
             ### Set meta_oldest_date to oldest as site data not always consistent 

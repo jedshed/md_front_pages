@@ -79,7 +79,7 @@ def main():
     ###############
     # func.debug_write_to_vault(markdown_final)
     # func.debug_clear_tmp_and_complete_and_log_folders()
-    func.debug_break()
+    # func.debug_break()
 
     ''' UNIQUE FUNC - PLAYBOOK HAS AM PM CODE
         THIS IS LIKELY MORE VANILLA VERSION '''

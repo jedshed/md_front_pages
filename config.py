@@ -6,49 +6,6 @@ import sys
 import tomllib
 
 class Config:
-    def __init__(self,
-                start_time,
-                sys_executable,
-                sys_platform,
-                base_url,
-                base_url_site,
-                limit,
-                project_name,out_folder_name,
-                file_ext,
-                out_folder_path,
-                fpad,
-                seperator1,
-                seperator2,
-                sleep_time,
-                out_folder_subfolders,
-                ROOT_DIR,
-                yaml_frontmatter_path,
-                version,
-                log_file_name,
-                tranx_path):
-
-        self.start_time = start_time
-        self.sys_executable = sys_executable
-        self.sys_platform = sys_platform
-        self.base_url = base_url
-        self.base_url_site = base_url_site
-        self.limit = limit
-        self.project_name = project_name
-        self.file_ext = file_ext
-        self.out_folder_path = out_folder_path
-        self.fpad = fpad
-        self.seperator1 = seperator1
-        self.seperator2 = seperator2
-        self.sleep_time = sleep_time
-        self.out_folder_name = out_folder_name
-        self.out_folder_subfolders = out_folder_subfolders
-        self.ROOT_DIR = ROOT_DIR
-        self.yaml_frontmatter_path = yaml_frontmatter_path
-        self.log_file_name = log_file_name
-        self.version = version
-        self.tranx_path = tranx_path
-
-
 
     ### Project Config
     ### project_name from toml file
@@ -59,11 +16,6 @@ class Config:
     sys_executable = sys.executable
     sys_platform = sys.platform
 
-    # ### Project Config
-    # project_name = 'md_front_pages'
-    # version = '_1.2'
-    # sys_executable = sys.executable
-    # sys_platform = sys.platform
 
     ### start_time for atexit
     start_time = f"{datetime.now():%Y-%m-%d--%H:%M:%S}"
@@ -98,11 +50,6 @@ class Config:
     out_folder_log_path = out_folder_path / 'log'
     out_folder_tmp_path = out_folder_path / 'tmp'
     out_folder_complete_path = out_folder_path / 'complete'
-
-
-    # out_folder_subfolders = [out_folder_log_path,
-    #                          out_folder_tmp_path,
-    #                          out_folder_complete_path]
 
 
     log_file_name = 'log_url'

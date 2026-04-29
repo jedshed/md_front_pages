@@ -44,7 +44,7 @@ def main():
     ''' PROJECT UNIQUE - NEEDS A FUNCTION ??? '''
     # Build and Display complete front_pages url with conf.base_url_site
     print(f"BUILD COMPLETE LATEST URL (conf.base)")
-    latest_url = conf.base_url_site + latest_url
+    latest_url = f"{conf.base_url_site}{latest_url}"
     print(f"--- {latest_url}")
     func.debug_delay_long()
 

@@ -58,7 +58,7 @@ def main():
     func.check_make_output_folders(
     do_func = True)
 
-    ''' FUNCS MATCH '''
+    ''' THIS FUNC VERSION TO PLAYBOOK '''
     ##### EXTRACT metadata as metadata_vars OBJ and display if required
     metadata_vars = func.extract_metadata_vars(latest_url,
     do_func = True,
@@ -74,12 +74,6 @@ def main():
     meta_description    = metadata_vars['meta_description']
     meta_publish_date   = metadata_vars['meta_publish_date']
 
-    ###############
-    # DEBUG FUNCS #
-    ###############
-    # func.debug_write_to_vault(markdown_final)
-    # func.debug_clear_tmp_and_complete_and_log_folders()
-    # func.debug_break()
 
     ''' UNIQUE FUNC - PLAYBOOK HAS AM PM CODE
         THIS IS LIKELY MORE VANILLA VERSION '''

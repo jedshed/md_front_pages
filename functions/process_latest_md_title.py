@@ -20,6 +20,7 @@ def process_latest_md_title(latest_md_title, do_func, do_display):
         latest_md_title = latest_md_title.replace(".", "")
         latest_md_title = latest_md_title.replace(": ", " - ")
         latest_md_title = latest_md_title.replace("%", " percent")
+        latest_md_title = latest_md_title.replace("?", "")
 
     except Exception as e:
         print(f"Failed to: {func_text:<{conf.fpad}} {e}")

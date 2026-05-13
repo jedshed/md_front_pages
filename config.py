@@ -37,7 +37,7 @@ class Config:
 
     ### BS Config
     base_url = 'https://www.bbc.co.uk/news/topics/cpml2v678pxt'
-    limit = 51
+    limit = 50
 
     # base_url = 'https://www.bbc.co.uk/news/topics/cpml2v678pxt'
     base_url_site = 'https://www.bbc.co.uk'
